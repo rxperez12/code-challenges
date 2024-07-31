@@ -7,11 +7,9 @@ class Solution {
   isAnagram(s, t) {
       const countS = this.counter(s)
       const countT = this.counter(t)
-      const longestWord = 
+      const longestCounter = (s.length > t.length)? countS: countT
 
-      console.log(countS, countT)
-
-      for(const key in countS){
+      for(const key in longestCounter){
           let valueS  = countS[key]
           let valueT = countT[key]
           if(valueS !== valueT) return false
