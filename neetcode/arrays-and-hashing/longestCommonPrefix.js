@@ -4,16 +4,16 @@
  * @return {string}
  */
 var longestCommonPrefix = function (strs) {
-  let longestWordLength = Math.max(...strs);
+  const shortestWordLength = Math.min(...strs.map(str => str.length));
   let i = 0;
   let longestPrefix = '';
 
-  if (longestWordLength === 0) return '';
+  if (shortestWordLength === 0) return '';
 
-  while (i < longestWordLength) {
-    let currentChar = strs[0][i];
+  while (i < shortestWordLength) {
+    let currentChar = strs[0][i]; //f
 
-    for (const str in strs) {
+    for (const str of strs) {
       if (str[i] !== currentChar) return longestPrefix;
     }
 
