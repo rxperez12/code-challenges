@@ -1,4 +1,9 @@
 
+/**
+ * Problem: https://leetcode.com/problems/group-anagrams/description/
+ * @param {*} strs
+ * @returns
+ */
 function groupAnagrams(strs) {
   const stringsHash = new Map();
   const charCodeA = 'a'.charCodeAt(0);
